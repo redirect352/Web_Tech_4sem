@@ -1,6 +1,6 @@
 <?php
 
-function GetFolderInfo($fold_path)
+function GetFolderInfo($fold_path) : int
 {
   $size = 0;
   
@@ -13,13 +13,14 @@ function GetFolderInfo($fold_path)
             if ($tmp == "file")
             {
                 $size = $size + filesize($fold_path.'/'.$file);
+                echo "файл: $file  <br>";
             }
             elseif ($tmp == "dir" && $file != "." && $file != ".." ) {
                $size = $size + GetFolderInfo($fold_path.'/'.$file);  
             }
 
 
-            echo "файл: $file тип $tmp <br>";
+            
         }
         closedir($dir_handle);
     }
@@ -31,10 +32,16 @@ function GetFolderInfo($fold_path)
 
 
 
-$Folder_name = "D:/TestFolder";
+$Folder_name = $_POST["Folderpath"];
+
+if (is_dir($Folder_name))
+{
+  $data = GetFolderInfo($Folder_name );
+  echo "<br> Size: $data bytes ";
+}
+else {
+  echo "\n You Entered incorect folder path. Error!";
+}
 
 
-$data = GetFolderInfo($Folder_name );
-
-echo "<br> Razmer: $data bytes";
 
