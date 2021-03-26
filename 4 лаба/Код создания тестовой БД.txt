@@ -1,0 +1,20 @@
+CREATE DATABASE Books;
+USE Books;
+CREATE TABLE books_info(
+id INT AUTO_INCREMENT PRIMARY KEY,
+author CHAR(64) ,
+year INT DEFAULT 9999,
+title CHAR(64),
+genre_id INT DEFAULT 0
+)
+
+INSERT INTO books_info set author = 'Tolstoy', year = 1880, title = 'War and Peace', genre_id= 1;
+
+UPDATE books_info year = 1879 WHERE title = 'War and Peace';
+
+SELECT id, author FROM books_info;
+
+
+БД реляционная тк поддерживает оператор JOIN
+
+JOIN 
