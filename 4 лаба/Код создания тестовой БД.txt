@@ -8,12 +8,14 @@ title CHAR(64),
 genre_id INT DEFAULT 0
 )
 
+INSERT INTO books_info set author = 'Neizvesten', year = 2000, title = 'Random letters', genre_id= 2;
 INSERT INTO books_info set author = 'Tolstoy', year = 1880, title = 'War and Peace', genre_id= 1;
+
 
 UPDATE books_info year = 1879 WHERE title = 'War and Peace';
 
 SELECT id, author FROM books_info;
-
+DELETE  FROM books_info WHERE year < 1900
 
 БД реляционная тк поддерживает оператор JOIN
 

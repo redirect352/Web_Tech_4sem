@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+    
+    <? if ($Input_data):?>
+    <h2><? echo $header ?></h2>
+
+    <form class = "userInfo" action="2.php" method="post">
+       
+        <?foreach ($Input_data as  $data):?>
+        
+            <? if (isset($data['text'])):?>
+                <p><?echo $data['text']?></p>
+            
+            <? endif;?>
+            <? if (isset($data['input'])):?>
+                <p><?echo $data['input']?></p>
+        
+            <? endif;?>
+        
+       
+        
+        
+        <?endforeach;?>
+
+    </form>
+
+    <?foreach ($DataLists as  $dat):?>
+        <datalist id = <?echo "'".$dat['id']."'"?>>
+            <?foreach ($dat['Opt'] as  $opt):?>
+                <option value=<?echo "'".$opt."'"?>></option>
+            <?endforeach;?>
+        </datalist>
+
+    <?endforeach;?>
+
+    <? else :?>
+        <p>Все данные уже введены, спасибо!</p>
+        <input type="submit">
+    <? endif;?>
+
+</body>
+</html>

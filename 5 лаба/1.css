@@ -1,0 +1,19 @@
+body{
+    background: url("background11.png");
+}
+.userInfo, h2{
+    margin: 0px 350px;
+    padding: 10px;
+}
+.userInfo{
+    border: white 2px solid;
+}
+textarea {
+    background:whitesmoke; /* Цвет фона */
+    border: 2px solid #c9d67e; /* Параметры рамки */
+    resize:  none;
+    width: 80%; /* Ширина */
+    height: 100px; /* Высота */
+    box-sizing: border-box; /* Алгоритм расчёта ширины */
+    font-size: 14px; /* Размер шрифта */
+}

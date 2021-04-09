@@ -1,0 +1,20 @@
+body{
+    background: url("back.jpg") ;
+    min-height:  500px;
+    justify-content:  center;
+}
+.header_p
+{
+    margin-top: 10%;
+    font-weight: 700;
+    font-size: 54px;
+    text-align:  center;
+    -webkit-text-stroke: .4px;
+    -webkit-text-stroke-color: white;
+}
+.bottom_text{
+ 
+    font-size: 24px;
+    text-align:  center;
+
+}

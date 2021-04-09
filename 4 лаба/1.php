@@ -26,7 +26,7 @@ if($count !=0)
 {
     $res = mysqli_query($sql_res,'USE Books');
     
-    $sql_ask = 'SELECT id, author FROM books_info';
+    $sql_ask = 'SELECT id, author FROM books_info;';
     $string_affected = 0;
     
     sscanf(mysqli_stat($sql_res), "Uptime: %d Threads: %d Questions: %d Slow queries: %d Opens: %d Flush tables: %d Open tables: %d Queries per second avg: %f",$uptime_final, $threads_final,$questions_start, $slow_start,$opens_final,$fflush_final,$tables_final,$average_final);
@@ -56,7 +56,8 @@ if($count !=0)
         $array[$row['Variable_name']] = $row['Value'];
     }
     echo"<br> КБ получено cервером: ".round($array['Bytes_received']/1024, 4)."<br>" ;
-
+    echo" КБ отправлено cервером: ".round($array['Bytes_sent']/1024, 4)."<br>" ;
+    
     mysqli_close($sql_res);
 
 }
