@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    
+    <h1>Регистрация нового пользователя</h1>
+    <? echo $warning ?>
+    <form action="../reg/registration.html" method="post">
+        <p>Имя:</p>
+        <input type="text"  name = "Name" required  if (isset($name)) echo $name; >
+        <p>Должность:</p>
+        <input type="text" name = "Position"  required  if (isset($position)) echo $position;  >
+        <p>Введите ваш email:</p>
+        <input type="email" name = "email"  required  if (isset($email)) echo $email;  >
+        <p>Введите пароль:</p>
+        <input type="password" required name = "Pasw">
+        <p> Повторите пароль:</p>
+        <input type="password" name = "Pasw2" required>
+        
+        <p></p>
+        <input type="reset" text = "Отмена"> 
+        <input type="submit" text = "Зарегистрироваться">
+        
+    </form>
+    
+    
+
+</body>
+</html>

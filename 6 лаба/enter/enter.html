@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Вход в систему</h1>
+    <? if (isset($Message)) echo $Message; ?>
+    <form action="../enter/enter.php" method="post">
+        
+        <p>Введите ваш email:</p>
+        <input type="email" name = "email"  required    >
+        <p>Введите пароль:</p>
+        <p><input type="password" required name = "Pasw"></p>
+        
+        <scan> <input type="checkbox" name="SaveMe">
+        <label for="SaveMe">Запомнить меня</label></scan>
+        <p></p> 
+        <input type="submit" text = "Войти">
+        
+    </form>
+</body>
+</html>

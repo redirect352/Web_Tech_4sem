@@ -16,7 +16,7 @@
                      [('text') => 'Как вы оцениваете работу нашего сайта?', ('input') => '<input type = "text" list = "pricelist" required>'],
                      [('text')=> 'C какими проблемами вы столкнулись во время работы с нашим сайтом?', ('input') => ' <textarea></textarea>'],
                      [('text')=> 'Введите ваш email', ('input') => '<input type = "email" requered placeholder = "example@gmail.com"'],
-                        [('input') => "<input type=\"submit\">" ]
+                        [('input') => "<input type=\"submit\">  <input type=\"reset\">" ]
                     ] ;
                      //  $Input_data = [];    
     $DataLists = [

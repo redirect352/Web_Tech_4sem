@@ -1,0 +1,14 @@
+body{
+    background: url("background11.png") ;
+    min-height:  500px;
+    justify-content:  center;
+    text-align:  center;
+}
+form
+{
+    border: 2px solid whitesmoke;
+    padding: 10px;
+    font-size: 20px;
+    margin:  0 200px;
+
+}
